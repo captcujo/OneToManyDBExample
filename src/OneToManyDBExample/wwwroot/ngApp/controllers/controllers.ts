@@ -1,7 +1,7 @@
 namespace OneToManyDBExample.Controllers
 {
 
-    export class HomeController
+    export class HomeController 
     {
         public message = 'Hello from the home page!';
 

@@ -56,7 +56,6 @@ namespace OneToManyDBExample.API
         }
 
         [HttpDelete("{id}")]
-        //public IActionResult Delete([FromBody]Movie movie)
         public IActionResult Delete(int id)
         {
             _movSer.DeleteMovie(id);

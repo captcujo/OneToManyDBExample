@@ -1,0 +1,54 @@
+﻿<h1>Add Movie</h1>
+<p>{{controller.message}}</p>
+
+<!--<div>
+    <form ng-submit="controller.addMovie()" class="form-control">
+
+        <label>Movie Title:</label>
+        <input type="text" ng-model="controller.movie.title" />
+
+        <label>Director:</label>
+        <input type="text" ng-model="controller.movie.director" />
+
+        <label>Category:</label>
+        <select ng-model="controller.movie.catagory.id" ng-options="cat.id as cat.name for cat in controller.categories">
+        <!-- Alternative method (but doesn't work for this example): bind/capture the Category object from the categories list:-->
+        <!--<select ng-model="controller.movie.catagory" ng-options="cat as cat.name for cat in controller.categories">-->
+                <!--<option value="">--Select category--</option>
+            </select>
+
+        <input type="submit" value="Add Movie" class="btn btn-success" />
+    </form>
+</div>-->
+
+<div class="jumbotron col-md-5">
+
+    <div class="container">
+
+        <h4>Movie Form</h4>
+
+        <form ng-submit="controller.addMovie()" class="col-md-10">
+
+            <div class="form-group">
+                <label for="Title">Title:</label>
+                <input placeholder="enter title" ng-model="controller.movie.title" required class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="Director">Director:</label>
+                <input placeholder="enter director's name" ng-model="controller.movie.director" required class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="Movie Category">Category:</label>
+                <select class="form-control" ng-model="controller.movie.catagory.id" ng-options="cat.id as cat.name for cat in controller.categories">
+                    <option value="">--Select category--</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary" >Save</button>
+            <a class="btn btn-default" data-dismiss="modal" ui-sref="home">Cancel</a>
+
+        </form> <!--end tag for "addForm"-->
+    </div> <!-- end tag of container-->
+</div> <!-- end tag jumbtron -->

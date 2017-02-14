@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Movie Title</th>
+                <th>Category</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{controller.movie.title}}</td>
+                <td><a ui-sref="catagory ({id:controller.movie.catagory.id})">{{controller.movie.catagory.name}}</a></td>
+                <td>{{controller.movie.director}} </td>
+                <td><button id="{{controller.movie.id}}" class="btn btn-primary" ng-click="controller.deleteMovie()">Delete</button></td>
+                <td><button id="{{controller.movie.id}}" class="btn btn-primary" ui-sref="editMovie ({id:controller.movie.id})">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!-- end tag of "container"-->
+
+<!--<td><a ui-sref="editCar ({id:car.id})">{{car.make}}</a></td>-->
+<!--<td><button id="{{p.product.id}}" class="btn btn-primary" ui-sref="editProduct ({id:p.product.id})">Edit</button></td>
+<td><button id="{{p.product.id}}" class="btn btn-primary" ng-click="p.deleteProduct(p.product.id)">Delete</button></td>-->

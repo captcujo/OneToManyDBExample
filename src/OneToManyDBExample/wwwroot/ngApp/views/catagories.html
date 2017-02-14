@@ -1,0 +1,25 @@
+﻿<div class="col-xs-2">
+</div>
+<div class="col-xs-8">
+    <h1>Movie catagories</h1>
+    <br>
+    <div class="jumbotron">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Catagory Name</th>
+                </tr>
+            </thead>
+            <tbody id='table'>
+                <tr ng-repeat="catagory in controller.catagories">
+                    <td>{{catagory.id}}</td>
+                    <td><a ui-sref="catagory ({id:catagory.id})">{{catagory.name}}</a></td>
+                    <td><button id="{{catagory.id}}" class="btn btn-primary" ng-click="controller.deleteCategory(catagory.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-xs-2">
+</div>
